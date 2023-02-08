@@ -26,7 +26,6 @@ class MessengerApi extends Controller
             ContactController::mailForPublic($email, $data);
  
             return response()->json(
-               ["success"=>"Votre message a bien été envoyé"],
                 Response::HTTP_OK
             );
                    
