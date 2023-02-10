@@ -5,6 +5,8 @@ namespace App\Http\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ContactController;
+use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Mail;
 
 class MessengerApi extends Controller
 {
@@ -27,9 +29,15 @@ class MessengerApi extends Controller
             ContactController::mailForPublic($email, $data);
  
             return response()->json(
+                ["success"=>"Votre message a bien été envoyé"],
                 Response::HTTP_OK
             );
                    
+        } else {
+            return response()->json(
+                ["error" => "Veuillez renseigner tous les champs"],
+                Response::HTTP_BAD_REQUEST
+             );
         }
     }
 }
