@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Contact;
-use App\Mail\Connexion;
 use App\Mail\ForPublic;
-use App\Mail\Indiscrete;
 use App\Models\Exploitant;
 
 class ContactController extends Controller
