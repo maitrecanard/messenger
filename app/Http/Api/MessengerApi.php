@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\ContactController;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Exploitant;
 
 class MessengerApi extends Controller
 {
@@ -17,12 +18,13 @@ class MessengerApi extends Controller
             $name = $request->input('name');
             $email = $request->input('email');
             $message = $request->input('message');
-
- 
+            $exploitant = Exploitant::first();
+            $url = $exploitant->dns;
             $data = [
                 'name' => $name,
                 'email' => $email,
-                'message' => $message
+                'message' => $message,
+                'url' => $url
             ];
        
             ContactController::sendMail($data);

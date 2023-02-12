@@ -60,6 +60,11 @@
         <tbody>
             <tr>
                 <td>
+                    <img src="https://{{ $data['url'] }}/assets/images/logo.png" >
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <h2>Réception d'un nouveau mail</h2>
                 </td>
             </tr>
@@ -74,12 +79,7 @@
             </tr>
             <tr>
                 <td>
-                    Message reçue depuis le site mathieusiaudeau.fr
-                    </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="">Connexion à l'administration</a>
+                    Message reçue depuis votre site mathieusiaudeau.fr
                     </td>
             </tr>
         </tbody>
