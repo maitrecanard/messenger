@@ -13,11 +13,11 @@ class MessengerApi extends Controller
 {
     public function messenger(Request $request)
     {
-        if ($request->filled(['name','email','message'])) {
+        if ($request->filled(['name','email','content'])) {
  
             $name = $request->input('name');
             $email = $request->input('email');
-            $message = $request->input('message');
+            $message = $request->input('content');
             $exploitant = Exploitant::first();
             $url = $exploitant->dns;
             $data = [
