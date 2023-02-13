@@ -4,6 +4,8 @@
     </IfModule>
 
     RewriteEngine On
+    # commande test
+    RewriteCond %{HTTPS} off
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
