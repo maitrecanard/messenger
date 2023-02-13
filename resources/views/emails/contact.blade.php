@@ -79,7 +79,7 @@
             </tr>
             <tr>
                 <td>
-                    Message reçue depuis votre site mathieusiaudeau.fr
+                    Message reçue depuis votre site {{ $data['url'] }}
                     </td>
             </tr>
         </tbody>

@@ -8,7 +8,7 @@
               
     <img src="https://{{ $data['url'] }}/assets/images/logo.png" >
             
-    <h2>Votre message sur le site mathieusiaudeau.fr</h2>
+    <h2>Votre message sur le site {{ $data['url'] }}</h2>
     <p>Merci pour votre message</p>
     <ul>
         <li>Nom : {{ $data['name'] }}</li>
