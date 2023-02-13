@@ -37,7 +37,7 @@ class MessengerApi extends Controller
                    
         } else {
             return response()->json(
-                ["error" => "Veuillez renseigner tous les champs"],
+                ["errors" => "Veuillez renseigner tous les champs"],
                 Response::HTTP_BAD_REQUEST
              );
         }
